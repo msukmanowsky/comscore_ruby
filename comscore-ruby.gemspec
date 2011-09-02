@@ -7,7 +7,7 @@ Gem::Specification.new do |s|
   s.version     = ComScore::VERSION
   s.authors     = ["Mike Sukmanowsky"]
   s.email       = ["mike.sukmanowsky@gmail.com"]
-  s.homepage    = ""
+  s.homepage    = "https://github.com/msukmanowsky/comscore_ruby"
   s.summary     = "Use comScore's SOAP API in a manner that does not require you to bang your head against a wall."
   s.description = "Basic support for things like finding media, media sets (AKA categories), and fetching reports.  Documentation is...well...missing so far."
 
