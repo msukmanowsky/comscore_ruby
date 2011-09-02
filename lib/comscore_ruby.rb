@@ -1,6 +1,6 @@
-require 'comscore-ruby/version'
-require 'comscore-ruby/client'
-require 'comscore-ruby/core_ext/date'
+require 'comscore_ruby/version'
+require 'comscore_ruby/client'
+require 'comscore_ruby/core_ext/date'
 
 require 'rubygems'
 require 'savon'
