@@ -18,6 +18,8 @@ require 'active_support/core_ext/date/zones'
 
 require 'active_support/core_ext/time/calculations'
 
+require 'active_support/inflector'
+
 module ComScore
 
 end

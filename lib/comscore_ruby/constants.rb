@@ -37,6 +37,7 @@ module ComScore
     "All Entries" => "-1"
   }
   MEASURES = {
+    "Target Audience (000)" => 73,
     "Total Unique Visitors (000)" =>	1,
     "% Reach" => 9,
     "% Composition Unique Visitors" => 10,
