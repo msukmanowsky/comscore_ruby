@@ -25,10 +25,10 @@ module ComScore
     end
     
     # Executes a request against ComScore's SOAP API.  Service name should correspond to one of the available services you've subscribed to:
-    #   - +:key_measures+
-    #   - +:audience_duplication+
-    #   - +:percent_media_trend+
-    #   - etc... see http://api.comscore.com for more information
+    # - +:key_measures+
+    # - +:audience_duplication+
+    # - +:percent_media_trend+
+    # - etc... see http://api.comscore.com for more information
     # You can (and should) pass a block to build the details of the request you're sending to the method.  See the examples below.
     #
     # == Examples
