@@ -79,7 +79,7 @@ module ComScore
     #    :targetType => ComScore::TARGET_TYPES["Simple"],
     #    :targetGroup => ComScore::TARGET_GROUPS["Total Audience"],
     #    :measure => [ComScore::MEASURES["Total Unique Visitors (000)"]]
-    #  )
+    #   )
     def get_report(service, opts = {})
       job_queue_response = self.request(service, :submit_report) do |xml|
         xml.query("xmlns" => "http://comscore.com/ReportQuery") {
