@@ -17,14 +17,14 @@ comScore uses basic HTTP authentication so just provide your regular login detai
     
 ## usage
 There are only two core methods for the client which doesn't try to "over architect a spaghetti API":
-* `get_report` - used to...while get reports and
-* `request` - more generic used to make any kind of request
+*   `get_report` - used to...while get reports and
+*   `request` - more generic used to make any kind of request
 
 For reference, I'd recommend keeping [comScore's SOAP API](https://api.comscore.com) open as you code to understand what services you have available to you.  Also ask them for their initial documentation which is absolutely horrible but at least their engineering staff is pretty helpful.
 
 The response returned by either of these requests is actually a [savon](http://savonrb.com/) [request object](http://rubydoc.info/gems/savon/0.9.7/Savon/Client#request-instance_method) to allow for maximum flexibility.  You can do things with this that are particularly nice:
-* `response.to_hash` which works well in most cases but has been known to be buggy with XML attributes (at least in Ruby 1.8.x)
-* `response.doc` the Nokogiri XML document to allow for some pretty advanced XPATH
+*   `response.to_hash` which works well in most cases but has been known to be buggy with XML attributes (at least in Ruby 1.8.x)
+*   `response.doc` the Nokogiri XML document to allow for some pretty advanced XPATH
 
 9x out of 10 you'll be able to use to_hash on a response but you will sometimes have need to query with XPATH due to how `to_hash` parses certain XML attributes in comScore's results.
 
