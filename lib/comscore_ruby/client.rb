@@ -106,7 +106,7 @@ module ComScore
       job_status = ""
       
       begin
-        sleep(DEFAULT_REPORT_WAIT_TIME) if job_status != ""
+        sleep(@wait_time) if job_status != ""
         job_status_response = self.request(service, :ping_report_status) { |xml| xml.jobId(job_id) }.to_hash
         job_status = job_status_response[:ping_report_status_response][:ping_report_status_result][:status]
       end while (job_status != "Completed" && job_status != "Failed")
