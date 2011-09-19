@@ -9,8 +9,7 @@ class ClientTest < Test::Unit::TestCase
   def setup
     @config = YAML::load(File.open("test/config.yml"))["comscore"]
     
-    @client = ComScore::Client.new(@config["username"], @config["password"])
-    @client.log = false
+    @client = ComScore::Client.new(@config["username"], @config["password"], :log => false, :wait_time => 1)
   end
   
   def test_fetch_media

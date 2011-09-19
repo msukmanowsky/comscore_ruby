@@ -18,8 +18,13 @@ module ComScore
       :mobilens_trend       => {:wsdl => "#{BASE_URI}MobiLens/Trend.asmx?WSDL"}
     }
     
-    def initialize(uname, pw)
-      @username, @password = [uname, pw]
+    def initialize(username, password, options={})
+      @username   = username
+      @password   = password
+      @wait_time  = options[:wait_time] ? options[:wait_time] : DEFAULT_REPORT_WAIT_TIME
+      self.log    = options[:log] ? options[:log] : false
+      
+      
       @client = Savon::Client.new
       @client.http.auth.basic(@username, @password)
     end
