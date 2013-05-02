@@ -54,8 +54,8 @@ module ComScore
     #     }
     #   end
     def request(service_name, method)
-      @client.wsdl.document = SERVICES[service_name][:wsdl]
-      
+      @client.wsdl.document = @client.wsdl.endpoint = SERVICES[service_name][:wsdl]
+
       @client.request(method) do
         soap.xml do |xml|
           xml.soap(:Envelope, "xmlns:xsi" => "http://www.w3.org/2001/XMLSchema-instance", "xmlns:xsd" => "http://www.w3.org/2001/XMLSchema", "xmlns:soap" => "http://schemas.xmlsoap.org/soap/envelope/") {
