@@ -21,7 +21,7 @@ comScore uses basic HTTP authentication so just provide your regular login detai
 ## usage
 There are only two core methods for the client which doesn't try to "over architect a spaghetti API":
 
-* `get_report` - used to...while get reports and
+* `get_report` - used to...well get reports and
 * `request` - more generic used to make any kind of request
 
 For reference, I'd recommend keeping [comScore's SOAP API](https://api.comscore.com) open as you code to understand what services you have available to you.  Also ask them for their initial documentation which is absolutely horrible but at least their engineering staff is pretty helpful.
